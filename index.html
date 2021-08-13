@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Predict Video game Sales</h1>
+
+<p>Enter values below.</p>
+
+<form action="{{ url_for('predict') }}"method="post">
+    <label for="NA_Sales">NA Sales:</label>
+    <input type="text" id="NA_Sales" name="NA_Sales"><br><br>
+    <label for="EU_Sales">EU Sales:</label>
+    <input type="text" id="EU_Sales" name="EU_Sales"><br><br>
+    <label for="JP_Sales">JP Sales:</label>
+    <input type="text" id="JP_Sales" name="JP_Sales"><br><br>
+    <label for="Other_Sales">Other Sales:</label>
+    <input type="text" id="Other_Sales" name="Other_Sales"><br><br>
+    <input type="submit" value="Submit">
+</form>
+<br>
+<br>
+
+{{ prediction_text }}
+
+</body>
+</html>
